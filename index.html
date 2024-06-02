@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarmSystems</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,700">
+    <link rel="stylesheet" href="css/misestilos.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-xxdFh0+za4tBK2LZy3ZsPn2K+hIhFf1zOTBJc4G8g/eABKcyS4XM/P6Orz5sA0Xw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-6NmNnnU5lO3qcUXr3LO/2RTxGXd/kRxrCxXd1v9Mf7rV7lE7AxrHeUnDkEnP5fm9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Additional CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #fff;
+            font-family: 'Mulish', sans-serif;
+        }
+
+
+        header {
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        #encabezado {
+            display: flex;
+            align-items: center; /* Alinear elementos verticalmente */
+            text-align: left;
+            background-color: rgb(255, 255, 255); /* Reducida opacidad */
+            color: black;
+            padding: 40px 0; /* Ajusta la altura del encabezado */
+            position: relative;
+            width: 100%; /* Extender el encabezado al 100% del ancho */
+            margin: 0; /* Eliminar márgenes */
+        }
+
+        .contenido {
+            flex: 1; /* Ocupar el espacio disponible */
+            padding: 0 40px; /* Espacio entre el contenido y la imagen */
+        }
+
+        .imagen {
+            flex: 1; /* Ocupar el espacio disponible */
+            text-align: right; /* Alinear la imagen a la derecha */
+        }
+
+        .imagen img {
+            width: auto;
+            height: 420px; /* Ajustar altura automáticamente */
+            border-radius: 20px;
+            margin-right: 50px;
+        }
+
+        .boton-descubre {
+            margin-top: 20px;
+        }
+
+        .btn-descubre {
+            background-color: #F49292; /* Color rosado */
+            color: white; /* Color del texto */
+            padding: 15px 30px; /* Ajusta el padding para hacer el botón más grande */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 25px; /* Tamaño del texto */
+        }
+
+        .btn-descubre:hover {
+            background-color: #F47C7C; /* Cambia el color al pasar el ratón */
+        }
+
+        #encabezado h2 {
+            font-size: 45px;
+            color: #000000;
+            padding: 5px 0;
+            margin-left: 40px;
+        }
+
+        #encabezado h4 {
+            font-size: 20px;
+            color: #000000;
+            margin-left: 45px;
+            font-weight: normal;
+        }
+
+        #encabezado a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            margin-left: 40px;
+            border: none;
+        }
+
+        #encabezado p {
+            font-size: 15px;
+            color: #000000;
+            padding: 40px 0;
+            margin-left: 30px;
+        }
+
+        #encabezado .opciones {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+        list-style: none; /* Elimina las viñetas de la lista */
+        }
+
+        li {
+        margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+        display: none; /* Oculta el checkbox nativo */
+        }
+
+        label.checkbox-label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        }
+
+        label.checkbox-label::before {
+            content: " "; /* Espacio en blanco para el pseudo-elemento */
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 255, 255); /* Color del cuadro cuando no está marcado */
+            border: 1px solid #888;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        input[type="checkbox"]:checked + label.checkbox-label::before {
+            background-color: rgb(102, 150, 102); /* Cambia el color del cuadro cuando se marca */
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #ffffff; padding: 10px; font-family: 'Quicksand', sans-serif">
+        <a href="index.html">
+            <img src="images/SmartFarmLogo.jpeg" height="100" style="margin-left: 20px;">
+        </a>
+        <nav>
+            <div class="menu-bar">
+                <a href="Nosotros.html" class="menu-item">Nosotros</a>
+                <a href="Servicios.html" class="menu-item">Servicios</a>
+                <a href="contactanos.html" class="menu-item">Contáctanos</a>
+                <a href="Blog.html" class="menu-item">Blog</a>
+                <a href="Registro.html" class="menu-item2">Crear Cuenta</a>
+                <a href="InicioSesion.html" class="menu-item3">Ingresar</a>
+            </div>
+        </nav>
+    </header>    
+    
+    <main style="font-family: 'Quicksand', sans-serif;">
+        <div id="encabezado">
+            <div class="contenido">
+                <h2>Te llevamos al futuro de la agricultura</h2>
+                <h4>Únete a la revolución de la agricultura inteligente y descubre sus ventajas.</h4>
+                <div class="boton-descubre">
+                    <a href="#" class="btn-descubre">Descubre más -></a>
+                </div>
+            </div>
+            <div class="imagen">
+                <img src="images/huertoautomatizado.jpg" alt="Imagen de Fondo">
+            </div>
+        </div>
+        <div class="column4" style="display: flex; justify-content: center; margin-top: 40px; background-color: #f5eeee;">
+            <section style="max-width: 1200px; width: 100%;">
+                <div style="display: flex; justify-content: space-between;">
+                    <!-- Primera columna -->
+                    <div style="flex: 1; padding-right: 20px; text-align: center; margin-left: 50px;"> <!-- Agrega un espacio entre las columnas -->
+                        <div>
+                            <img src="images/Sistemasagricultores.jpg" style="margin-top: 50px; height: 300px; border-radius: 20px; width: auto">
+                            <h1 style = "margin-top: 20px; ">Sistemas Agricultores</h1>
+                            <p>Ofrecemos los mejores servicios de automatización para Agricultores, enfocados en optimizar el riego de cultivos y su monitoreo.</p>
+                        </div>
+                    </div>
+                    <!-- Segunda columna -->
+                    <div style="flex: 1; padding-left: 20px; text-align: center;margin-top: 50px; margin-bottom: 20px; margin-right: 50px; "> <!-- Agrega un espacio entre las columnas -->
+                        <div>
+                            <h1>Sistemas Ganaderos</h1>
+                            <p>Ofrecemos los mejores servicios de automatización pensados en los Ganaderos, centrados en mejorar la monitorización y alimentación del ganado.</p>
+                            <img src="images/sistemasganaderos.png" style="height: 300px; border-radius: 20px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="column4" style="display: flex; justify-content: center; margin-top: 40px; background-color: #ffffff;">
+            <div class="row">
+
+                <div class="col-md-12">
+    
+                    <hr>
+    
+                </div>
+            
+
+                <div id="carouselExample" class="carousel slide d-none d-sm-none d-md-block" data-ride="carousel">
+    
+                    <div class="carousel-inner">
+    
+                        <div class="carousel-item active">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/riego.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/alimentacion.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/monitoreo.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/iluminacion.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 1 -->
+    
+                        <div class="carousel-item">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/camara.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/riego.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/alimentacion.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/monitoreo.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 2 -->
+    
+                        <div class="carousel-item">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/iluminacion.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/camara.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/riego.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/alimentacion.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 3 -->
+    
+                    </div>
+    
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" style="background-color: #58A371; width:100px;">
+    
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Previous</span>
+    
+                    </a>
+                    <!-- Carousel Control Prev -->
+    
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next" style="background-color: #58A371; width:100px;">
+    
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Next</span>
+    
+                    </a>
+                    <!-- Carousel Control Next -->
+    
+                </div>
+                <!-- End of Carousel Example -->
+    
+    
+                <div id="carouselExampleMobile" class="carousel slide d-md-none d-lg-none d-xl-none" data-ride="carousel">
+    
+                    <div class="carousel-inner">
+    
+                        <div class="carousel-item active">
+                                
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 1&font=noto" alt="First slide">
+    
+                        </div>
+                        <!-- Carousel Item 1 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 2&font=noto" alt="Second slide">
+    
+                        </div>
+                        <!-- Carousel Item 2 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 3&font=noto" alt="Third slide">
+                            
+                        </div>
+                        <!-- Carousel Item 3 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 4&font=noto" alt="Fourth slide">  
+    
+                        </div>
+                        <!-- Carousel Item 4 -->
+    
+                        <div class="carousel-item">
+                                
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 5&font=noto" alt="Fifth slide">
+    
+                        </div>
+                        <!-- Carousel Item 5 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 6&font=noto" alt="Sixth slide">
+    
+                        </div>
+                        <!-- Carousel Item 6 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 7&font=noto" alt="Seventh slide">
+    
+                        </div>
+                        <!-- Carousel Item 7 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 8&font=noto" alt="Eighth slide">
+    
+                        </div>
+                        <!-- Carousel Item 8 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 9&font=noto" alt="Ninth slide">
+    
+                        </div>
+                        <!-- Carousel Item 9 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 10&font=noto" alt="Tenth slide">
+    
+                        </div>
+                        <!-- Carousel Item 10 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 11&font=noto" alt="Eleventh slide">
+    
+                        </div>
+                        <!-- Carousel Item 11 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 12&font=noto" alt="Twelveth slide">
+    
+                        </div>
+                        <!-- Carousel Item 12 -->
+    
+                    </div>
+    
+                    <a class="carousel-control-prev" href="#carouselExampleMobile" role="button" data-slide="prev">
+    
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Previous</span>
+    
+                    </a>
+                    <!-- Carousel Control Prev -->
+    
+                    <a class="carousel-control-next" href="#carouselExampleMobile" role="button" data-slide="next">
+    
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Next</span>
+    
+                    </a>
+                    <!-- Carousel Control Next -->
+    
+                </div>
+                <!-- End of Carousel Example -->
+    
+                <!-- 
+                    =================================
+                    /End of Mobile Edition 
+                    =================================
+                -->
+    
+            </div>
+            <!-- End of Row -->
+    
+        </div>
+        <!-- End of Container -->
+    
+        <!-- JQuery Plugin -->
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        <!-- Bootstrap JQuery Plugin -->
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    
+        <!-- Additional Javascript -->
+        <script src="js/main.js"></script>
+        </div>
+        <div class="column4" style="display: flex; justify-content: center; margin-top: 40px; background-color: #f5eeee;">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <h1 class="text-center carousel-title" style="margin-top: 20px;font-family: 'Quicksand', sans-serif; font-weight: bold;">Últimos Artículos</h1>
+                    <hr>
+    
+                </div>
+            
+
+                <div id="carouselExample" class="carousel slide d-none d-sm-none d-md-block" data-ride="carousel" style="margin-bottom:30px;">
+    
+                    <div class="carousel-inner">
+    
+                        <div class="carousel-item active">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog1.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog2.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog3.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog4.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 1 -->
+    
+                        <div class="carousel-item">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog1.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog2.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog3.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog4.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 2 -->
+    
+                        <div class="carousel-item">
+    
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog1.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog2.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog3.png" alt="First slide">
+                                </div>
+                                <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/blog4.png" alt="First slide">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!-- Carousel Item 3 -->
+    
+                    </div>
+    
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" style="background-color: #58A371; width:100px;">
+    
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Previous</span>
+    
+                    </a>
+                    <!-- Carousel Control Prev -->
+    
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next" style="background-color: #58A371; width:100px;">
+    
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Next</span>
+    
+                    </a>
+                    <!-- Carousel Control Next -->
+    
+                </div>
+                <!-- End of Carousel Example -->
+    
+    
+                <div id="carouselExampleMobile" class="carousel slide d-md-none d-lg-none d-xl-none" data-ride="carousel">
+    
+                    <div class="carousel-inner">
+    
+                        <div class="carousel-item active">
+                                
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 1&font=noto" alt="First slide">
+    
+                        </div>
+                        <!-- Carousel Item 1 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 2&font=noto" alt="Second slide">
+    
+                        </div>
+                        <!-- Carousel Item 2 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 3&font=noto" alt="Third slide">
+                            
+                        </div>
+                        <!-- Carousel Item 3 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 4&font=noto" alt="Fourth slide">  
+    
+                        </div>
+                        <!-- Carousel Item 4 -->
+    
+                        <div class="carousel-item">
+                                
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 5&font=noto" alt="Fifth slide">
+    
+                        </div>
+                        <!-- Carousel Item 5 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 6&font=noto" alt="Sixth slide">
+    
+                        </div>
+                        <!-- Carousel Item 6 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 7&font=noto" alt="Seventh slide">
+    
+                        </div>
+                        <!-- Carousel Item 7 -->
+    
+                        <div class="carousel-item">
+                    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 8&font=noto" alt="Eighth slide">
+    
+                        </div>
+                        <!-- Carousel Item 8 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 9&font=noto" alt="Ninth slide">
+    
+                        </div>
+                        <!-- Carousel Item 9 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 10&font=noto" alt="Tenth slide">
+    
+                        </div>
+                        <!-- Carousel Item 10 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 11&font=noto" alt="Eleventh slide">
+    
+                        </div>
+                        <!-- Carousel Item 11 -->
+    
+                        <div class="carousel-item">
+    
+                            <img class="d-block w-100" src="https://fakeimg.pl/800x400/?retina=1&text=Logo 12&font=noto" alt="Twelveth slide">
+    
+                        </div>
+                        <!-- Carousel Item 12 -->
+    
+                    </div>
+    
+                    <a class="carousel-control-prev" href="#carouselExampleMobile" role="button" data-slide="prev">
+    
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Previous</span>
+    
+                    </a>
+                    <!-- Carousel Control Prev -->
+    
+                    <a class="carousel-control-next" href="#carouselExampleMobile" role="button" data-slide="next">
+    
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    
+                        <span class="sr-only">Next</span>
+    
+                    </a>
+                    <!-- Carousel Control Next -->
+    
+                </div>
+                <!-- End of Carousel Example -->
+    
+                <!-- 
+                    =================================
+                    /End of Mobile Edition 
+                    =================================
+                -->
+                <div class="center-button-container" style="font-family: 'Quicksand',sans-serif; font-size: 18px; margin-top: -20px; margin-bottom: 15px;">
+                    <a href="Blog.html" class="menu-item4">Ir al Blog</a>
+                </div>
+            </div>
+            <!-- End of Row -->
+    
+        </div>
+        <!-- End of Container -->
+    
+        <!-- JQuery Plugin -->
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        <!-- Bootstrap JQuery Plugin -->
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    
+        <!-- Additional Javascript -->
+        <script src="js/main.js"></script>
+        
+        
+        </div>
+            
+            
+          
+        </div>
+
+        <div class="column4" style="display: flex; justify-content: center; margin-top: 40px; background-color: #ffffff;">
+            <section style="max-width: 1200px; width: 100%;">
+                <div style="display: flex; justify-content: space-between;">
+                    <!-- Primera columna -->
+                    <div style="flex: 1; padding-right: 20px; text-align: center; margin-left: 50px; margin-top:50px;"> <!-- Agrega un espacio entre las columnas -->
+                        <div>
+                            <h1 style = "margin-top: 20px; ">¿Estás interesado en mejorar la productividad de tu granja?</h1>
+                            <div class="center-button-container" style="font-family: 'Quicksand',sans-serif; font-size: 20px; margin-top: -20px; margin-bottom: 15px;">
+                                <a href="contactanos.html" class="menu-item5">Contáctanos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segunda columna -->
+                    <div style="flex: 1; padding-left: 20px; text-align: center;margin-top: 20px; margin-bottom: 20px; margin-right: 50px; "> <!-- Agrega un espacio entre las columnas -->
+                        <div>
+    
+                            <img src="images/vaca-granja.png" style="height: 300px; border-radius: 30px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        </div>
+        <footer style="padding: 20px 0; text-align: left; font-family: 'Quicksand', sans-serif; background-color: #D5F1E5;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Columna 1: Logo -->
+                <div style="flex: 1;">
+                    <img src="images/SmartFarmLogo.jpeg" height="150" style="margin-left: 50px;">
+                </div>
+                <!-- Columna 2: Botones -->
+                <div style="flex: 1; justify-content: space-between; align-items: flex-start;">
+                    <a href="contactanos.html" style="display: block; margin-bottom: 10px;">Contáctanos</a>
+                    <a href="#" style="display: block; margin-bottom: 10px;">&#x2709; info@smartfarm.pe</a>
+                    <a href="#" style="display: block; margin-bottom: 10px;">Empresas</a>
+                    <a href="#" style="display: block; margin-bottom: 10px;">Inscripción</a>
+                    <a href="#" style="display: block; margin-bottom: 10px;">Términos y condiciones</a>
+                </div>
+                <!-- Columna 3: Información de locales y horarios -->
+                <div style="flex: 1">
+                    <div style="margin-bottom: 10px;">
+                        <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">LOCALES Y CONTACTO</p>
+                        <p>Av. San Luis 2645, San Borja</p>
+                        <p>941 145 243</p>
+                        <p>01 635 2774</p>
+                    </div>
+                </div>
+                <!-- Columna 4: Información de horarios -->
+                <div style="flex: 1">
+                    <div style="margin-bottom: 5px;">
+                        <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">HORARIOS</p>
+                        <p style="font-weight: bold;">San Borja</p>
+                        <p>Atención: Lunes a Sábado - 8 a.m. - 10 p.m.</p>
+                        <p>Domingos - 8 a.m. - 8 p.m.</p>
+                        <p>1012457896</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 10px; text-align: center;">@2024 Smart Farm Systems | Todos los derechos reservados.</p>
+            <div style="text-align: left; margin-left: 50px; margin-top: -20px; display: flex; align-items: center;">
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook silueta.png" height="35" style="margin-right: 20px;"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram silueta.png" height="35" style="margin-right: 20px;"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube silueta.png" height="40"></a>
+            </div>
+        
+        </footer>
+    
+    
+</body>
+
+</html>

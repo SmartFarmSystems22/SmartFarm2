@@ -1,0 +1,594 @@
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.search-icon {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.menu-bar {
+    display: inline-flex;
+    background-color: #78C191; /* Color de fondo verde */
+    border-radius: 30px; /* Bordes ovalados */
+    overflow: hidden; /* Para que los bordes ovalados se apliquen correctamente */
+    margin: 0 20px; /* Margen para separar del logo */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    height: 50px;
+}
+
+.menu-item {
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    margin-top: 4px;
+}
+
+.menu-item:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+.menu-item:first-child {
+    margin-right: 10px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.menu-item2 {
+    color: rgb(0, 0, 0); /* Color del texto blanco */
+    background-color: #D5F1E5;
+    border-radius: 15px;
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    height: 35px;
+    margin-top: 6px;
+    line-height: 15px;
+}
+
+.menu-item3 {
+    color: rgb(0, 0, 0); /* Color del texto blanco */
+    background-color: #FAFAFA;
+    border-radius: 15px;
+    padding: 10px 20px; /* Espaciado interno */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    height: 35px;
+    margin-top: 6px;
+    line-height: 15px;
+}
+
+.menu-item:first-child {
+    margin-right: 10px;
+}
+
+.menu-item:nth-child(1),
+.menu-item:nth-child(2),
+.menu-item:nth-child(3),
+.menu-item:nth-child(4),
+.menu-item:nth-child(5) {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.fa-user {
+    color: rgb(0, 0, 0); /* Cambia el color del icono a azul */
+    font-size: 15px; /* Cambia el tamaño del icono */
+}
+
+
+#tendencias .reto {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinear elementos verticalmente */
+    text-align: left;
+    background-color: rgb(255, 255, 255); /* Reducida opacidad */
+    color: black;
+    padding: 40px 0; /* Ajusta la altura del encabezado */
+    position: relative;
+    width: 100%; /* Extender el encabezado al 100% del ancho */
+    margin: 0; /* Eliminar márgenes */
+}
+
+.column {
+    flex: 0 1 calc(20%);
+    padding: 10px;
+}
+
+
+.column h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #96E500;
+}
+
+.column p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.column p2 {
+    font-size: 12px;
+    text-align: justify;
+}
+
+.column a {
+    text-decoration: none;
+    border: none;
+}
+
+.column2 {
+    margin-top: 100px;
+    flex: 0 1 calc(40%);
+    padding: 10px;
+}
+
+.column2 h1 {
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.column2 h2 {
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.column2 h3 {
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.column2 a{
+    background-color: #96E500;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    border: none;
+}
+
+section h3::before,
+section h3::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 120px;
+    background-color: #96E500;
+    margin: 0 10px;
+    margin-bottom: 5px;
+}
+
+.column3 {
+    flex: 0 1 calc(30%);
+    padding: 10px;
+    background: linear-gradient(to bottom, #78C191, #000000);
+}
+
+.column3 h1 {
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+    margin-top: 180px;
+}
+
+.column3 h2 {
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+    margin-left:80px;
+    margin-right: 80px;
+}
+
+.column3 a{
+    background-color: #78C191;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.column4 {
+    flex: 0 1 calc(50%);
+}
+
+.column4 h1 {
+    font-size: 30px;
+    text-align: center; 
+    color: #000000;
+    font-weight: bold;
+}
+
+.column4 p {
+    font-size: 16px;
+    text-align: justify; 
+    color: #000000;
+}
+
+.column5 {
+    flex: 0 1 calc(100%);
+    padding: 10px;
+    background-color:#96E500;
+}
+
+.column5 h1 {
+    font-size: 20px;
+    text-align: center; 
+    color: #000000;
+    font-weight: bold;
+}
+
+.column5 p {
+    font-size: 16px;
+    text-align: justify; 
+    color: #000000;
+}
+
+.recuadro {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #000; /* Cambio de color de texto a negro para mejorar la visibilidad */
+}
+
+.recuadro label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Cambio de color de texto a negro para mejorar la visibilidad */
+}
+
+.recuadro input {
+    background-color: #D5F1E5;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+.seccionizq,
+.seccionder {
+    flex: 4;
+}
+
+.seccionder {
+    background-color: #000000;
+}
+
+.seccionder .reto {
+    background-color: #96E500;
+    padding: none;
+}
+
+.seccionizq h3,
+.seccionder h3 {
+    font-size: 20px;
+}
+
+.trend-item {
+    text-align: center;
+    margin: 8px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.trend-item p {
+    margin: 3px 0;
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+.boton-unirse {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    fill: #000; /* Cambiar el color de las flechas a negro */
+}
+
+
+#carouselExample,
+#carouselExampleMobile {
+    padding: 0 180px; /* Ajusta el espacio a los lados del carousel */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes al ancho del carousel */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes al ancho del carousel */
+}
+
+.center-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item4 {
+    color: rgb(0, 0, 0); /* Color del texto blanco */
+    background-color: #78C191;
+    border-radius: 15px;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    height: 45px;
+    width: 100px;
+    margin-top: 6px;
+    line-height: 40px;
+}
+
+.menu-item5 {
+    color: rgb(0, 0, 0); /* Color del texto blanco */
+    background-color: #F49292;
+    border-radius: 25px;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    box-shadow: none;
+    border: none; /* Eliminar bordes */
+    height: 45px;
+    width: 250px;
+    margin-top: 60px;
+    line-height: 43px;
+}
+
+footer {
+    background-color: linear-gradient(to right, #96E500, #000000);
+    color: #000000;
+    text-align: left;
+    padding: 20px;
+}
+
+footer p {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 0px;
+    font-size: 15px;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#encabezado {
+    text-align: left;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+#encabezado .contenido {
+    display: flex;           /* Establece flexbox para alinear elementos horizontalmente */
+    align-items: center;     /* Alinea los elementos verticalmente en el centro */
+    gap: 10px;               /* Espacio entre los elementos */
+}
+
+#encabezado h2 {
+    font-size: 35px;
+    color: #78C191;
+    padding: 0px 0;
+    margin-left: 30px;
+    font-weight: lighter;
+}
+
+#encabezado h3 {
+    font-size: 35px;
+    color: #48835d;
+    font-weight: bold;
+    padding: 0px 0;
+}
+
+#encabezado a {
+    background-color: #96E500;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#encabezado p {
+    font-size: 15px;
+    color: #fff;
+    padding: 40px 0;
+    margin-left: 30px;
+}
+
+#encabezado .opciones {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recuadro1 {
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 15px;
+    flex: 2.25;
+    margin-right: 10px;
+}
+
+#recuadro1 h1 {
+    color: #61aa7b;
+    font-size: 23px;
+    text-align: left;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.btn-Vermás {
+    background-color: #61aa7b; /* Color rosado */
+    color: white; /* Color del texto */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 15px; /* Tamaño del texto */
+    margin-bottom: 10px;
+}
+
+#contenedor {
+    display: flex; /* Utiliza flexbox para alinear los elementos hijos horizontalmente */
+}
+
+#recuadro1, #recuadro2 {
+    padding: 10px; /* Agrega un poco de padding alrededor de los recuadros */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho y alto definidos */
+}
+
+#recuadro2 {
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 15px;
+    flex: 1.5;
+}
+
+#recuadro2 h1{
+    color: #61aa7b;
+    font-size: 23px;
+    text-align: center ;
+    font-weight: bold;
+}
+
+#contenedor2 {
+    display: flex; /* Utiliza flexbox para alinear los elementos hijos horizontalmente */
+}
+
+#recuadro3{
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 15px;
+    flex: 1.20;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#recuadro3 h1{
+    color: #61aa7b;
+    font-size: 23px;
+    text-align: left;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+#recuadro3 h2{
+    color: #61aa7b;
+    font-size: 20px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#recuadro3 p1{
+    color: #000000;
+    font-size: 15px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+#recuadro4{
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 15px;
+    flex: 1;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#recuadro4 h1{
+    color: #61aa7b;
+    font-size: 23px;
+    text-align: left;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.circular-image {
+    width: 100px;  /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Asegúrate de que el alto y el ancho sean iguales */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover;  /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+#recuadro4 h2{
+    color: #61aa7b;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#recuadro4 p1{
+    color: #000000;
+    font-size: 12px;
+    text-align: center;
+}
+
+#recuadro5{
+    background-color: #ddd;
+    margin-left: 10px;
+    border-radius: 15px;
+    flex: 1;
+    margin-right: 10px;
+    margin-top: 20px;
+    flex: 1.5;
+}
+
+#recuadro5 h1{
+    color: #61aa7b;
+    font-size: 23px;
+    text-align: center ;
+    font-weight: bold;
+}

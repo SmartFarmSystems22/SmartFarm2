@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarmSystems</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,700">
+    <link rel="stylesheet" href="css/misestilos.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-xxdFh0+za4tBK2LZy3ZsPn2K+hIhFf1zOTBJc4G8g/eABKcyS4XM/P6Orz5sA0Xw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-6NmNnnU5lO3qcUXr3LO/2RTxGXd/kRxrCxXd1v9Mf7rV7lE7AxrHeUnDkEnP5fm9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Additional CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+    <style>
+        .about-us {
+            width: 750px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 90px;
+        }
+
+        .about-us h1 {
+            margin-left: 230px;
+            font-size: 64px;
+            color: #000;
+        }
+
+        .about-us p {
+            font-size: 21px;
+            color: #000;
+            text-align: justify;
+            margin-left: 40px; 
+        }
+
+        .vision-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .vision-content, .mision-content {
+            width: 100%;
+            max-width: 48%;
+            padding: 22px 30px;
+            border-radius: 25px;
+            background-color: #78C191;
+            color: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .vision-content h2, .mision-content h2 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .vision-content p, .mision-content p {
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        .boton-contacto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .boton-contacto button {
+            height: 90px;
+            width: 390px;
+            background-color: #F17268;
+            border-radius: 5px 5px 5px 25px;
+            cursor: pointer;
+            color: #000;
+            font-size: 40px;
+            font-weight: 700;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .boton-contacto button:hover {
+            background-color: #ec4a3e;
+            color: #fff;
+        }
+
+        .boton-contacto button:hover span,
+        .boton-contacto button:hover .whatsapp-icon {
+            color: #fff;
+        }
+
+        .whatsapp-icon {
+            height: 30px;
+            width: auto;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .team-section h1 {
+            margin-left: 152px;
+            font-size: 64px;
+            color: #000;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 110px;
+        }
+
+        .team-member {
+            background-color: #D5F1E5;
+            border-radius: 30px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 340px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .team-member h2 {
+            font-size: 22px;
+            margin: 10px 10px;
+            color: #D5F1E5;
+        }
+
+        .team-member p {
+            font-size: 20px;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #fff;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        #encabezado {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 40px 0;
+            position: relative;
+            width: 100%;
+            margin: 0;
+        }
+
+        .contenido {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .imagen {
+            flex: 1;
+            text-align: right;
+        }
+
+        .imagen img {
+            width: auto;
+            height: 520px;
+            border-radius: 20px;
+            margin-right: 50px;
+        }
+
+        .boton-descubre {
+            margin-top: 20px;
+        }
+
+        .btn-descubre {
+            background-color: #F49292;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 25px;
+        }
+
+        .btn-descubre:hover {
+            background-color: #F47C7C;
+        }
+
+        #encabezado h2 {
+            font-size: 60px;
+            color: #000000;
+            padding: 5px 0;
+            margin-left: 40px;
+        }
+
+        #encabezado h4 {
+            text-align: justify; 
+            font-size: 20px;
+            color: #000000;
+            margin-left: 45px;
+            font-weight: normal;
+        }
+
+        #encabezado a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            margin-left: 40px;
+            border: none;
+        }
+
+        #encabezado p {
+            font-size: 15px;
+            color: #000000;
+            padding: 40px 0;
+            margin-left: 30px;
+        }
+
+        #encabezado .opciones {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label.checkbox-label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        label.checkbox-label::before {
+            content: " ";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid #888;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        input[type="checkbox"]:checked + label.checkbox-label::before {
+            background-color: rgb(102, 150, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #ffffff; padding: 10px; font-family: 'Quicksand', sans-serif">
+        <a href="index.html">
+            <img src="images/SmartFarmLogo.jpeg" height="100" style="margin-left: 20px;">
+        </a>
+        <nav>
+            <div class="menu-bar">
+                <a href="#nosotros" class="menu-item">Nosotros</a>
+                <a href="Servicios.html" class="menu-item">Servicios</a>
+                <a href="contactanos.html" class="menu-item">Contáctanos</a>
+                <a href="Blog.html" class="menu-item">Blog</a>
+                <a href="Registro.html" class="menu-item2">Crear Cuenta</a>
+                <a href="InicioSesion.html" class="menu-item3">Ingresar</a>
+            </div>
+        </nav>
+    </header>    
+    <main>
+        <div id="encabezado">
+            <div class="contenido">
+                <h2>Nosotros</h2>
+                <h4>SmartFarm está dedicada a la implementación de soluciones innovadoras para la automatización
+                    de las granjas. Nuestro enfoque principal es proporcionar tecnología avanzada que optimice 
+                    los procesos agrícolas y mejore la productividad, al mismo tiempo que se reducen los costos 
+                    y se minimiza el impacto ambiental. Por ello, desarrollamos un sistema automatizado que ayude 
+                    a los ganaderos en la alimentación de los animales y a los agricultores en el proceso de riego 
+                    de sus huertos, en el que incluirá sensores, cámaras de vigilancia, sistemas de iluminación, 
+                    dispositivos de identificación, entre otros para el funcionamiento, monitoreo y control remoto.
+                </h4>
+            </div>
+            <div class="imagen">
+                <img src="images/huertoautomatizado.jpg">
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="vision-container">
+                <div class="vision-content">
+                    <h2>Visión</h2>
+                    <p>Nos visualizamos como líderes en el campo de la automatización agrícola, ofreciendo soluciones innovadoras que transformen la forma en que se cultivan y gestionan los alimentos. Aspiramos a crear un impacto positivo en la sociedad al contribuir a la seguridad alimentaria global y a la conservación del medio ambiente.</p>
+                </div>
+                <div class="mision-content">
+                    <h2>Misión</h2>
+                    <p>Nuestra misión es revolucionar la industria agrícola y ganadera mediante la integración de sistemas inteligentes y tecnología de vanguardia. Nos esforzamos por mejorar la eficiencia y sostenibilidad de las operaciones agrícolas, permitiendo a los agricultores alcanzar un mayor rendimiento y rentabilidad, así como lograr que los ganaderos tengan una mayor eficacia en sus actividades y el tiempo que utiliza cada una de ellas.
+                    </p>
+                </div>
+            </div>
+            <div class="team-section">
+                <h1>Nuestro equipo</h1>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="images/integrantes/marsi.jpg" alt="Marsi Valeria Figueroa Larragán">
+                        <h2>Marsi Valeria Figueroa Larragán</h2>
+                        <p>Soy una estudiante de Ciencias de la Computación y entusiasta en Data Science y la elaboración de páginas web. Es por ello, que poseo conocimientos en diferentes lenguajes de programación como C++, Python, Go, HTML, JavaScript, Ruby y CSS. De igual manera, al trabajar con base de datos tengo un sólido conocimiento en SQL y MongoDB</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/integrantes/chui.jpg" alt="Rafael Tomas Chui Sanchez">
+                        <h2>Rafael Tomas Chui Sanchez</h2>
+                        <p>Mi nombre es Rafael Chui, tengo 22 años y soy estudiante de la carrera Ciencias de la Computación. Me gusta escuchar música, ver películas y jugar videojuegos.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/integrantes/meza.jpg" alt="Rodrigo Alejandro Meza Polo">
+                        <h2>Rodrigo Alejandro Meza Polo</h2>
+                        <p>Soy Rodrigo Meza tengo 21 años y estudio la carrera de Ciencias de la Computación en la Universidad Peruana de Ciencias Aplicadas (UPC). Mis aficiones son los temas relacionados a la programación, la informática y el diseño gráfico. Además, mis hobbies principales son el fútbol, los videojuegos y la cocina. Me considero alguien colaborador, responsable y organizado al momento de tomar decisiones. Mis conocimientos en lenguajes de programación son en C++ y Python.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/integrantes/adri.jpg" alt="Adriana Giovanna Palomares Chávez">
+                        <h2>Adriana Giovanna Palomares Chávez</h2>
+                        <p>Soy Adriana Palomares, tengo 20 años y actualmente estudio la carrera de Ingeniería de software en UPC. Me gusta mucho indagar sobre las nuevas tecnologías y en especial los lenguajes de programación, también me apasionan los animales, en especial los perros.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/integrantes/colleen.jpg" alt="Loana Rodríguez Matos">
+                        <h2>Loana Rodríguez Matos</h2>
+                        <p>Soy Loana Rodríguez Matos, tengo 21 años y estudio la carrera de ciencias de la computación en la UPC. Me gusta mucho aprender nuevos lenguajes de programación y actualizarme. Me apasiona mucho la pintura, la música y los deportes de contacto.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/integrantes/fabrizio.jpg" alt="Fabrizio Javier Quiroz Zambrano">
+                        <h2>Fabrizio Javier Quiroz Zambrano</h2>
+                        <p>Me encanta todo lo que tenga que ver con la tecnología y el mundo competitivo de los videojuegos, siempre trato de ser el mejor en lo que hago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 20px 0; text-align: left; font-family: 'Quicksand', sans-serif; background-color: #D5F1E5;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1;">
+                <img src="images/SmartFarmLogo.jpeg" height="150" style="margin-left: 50px;">
+            </div>
+            <div style="flex: 1; justify-content: space-between; align-items: flex-start;">
+                <a href="contactanos.html" style="display: block; margin-bottom: 10px;">Contáctanos</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">&#x2709; info@smartfarm.pe</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Empresas</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Inscripción</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Términos y condiciones</a>
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 10px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">LOCALES Y CONTACTO</p>
+                    <p>Av. San Luis 2645, San Borja</p>
+                    <p>941 145 243</p>
+                    <p>01 635 2774</p>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 5px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">HORARIOS</p>
+                    <p style="font-weight: bold;">San Borja</p>
+                    <p>Atención: Lunes a Sábado - 8 a.m. - 10 p.m.</p>
+                    <p>Domingos - 8 a.m. - 8 p.m.</p>
+                    <p>1012457896</p>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px; text-align: center;">@2024 Smart Farm Systems | Todos los derechos reservados.</p>
+        <div style="text-align: left; margin-left: 50px; margin-top: -20px; display: flex; align-items: center;">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube silueta.png" height="40"></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

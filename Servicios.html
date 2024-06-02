@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarmSystems</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,700">
+    <link rel="stylesheet" href="css/misestilos.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-xxdFh0+za4tBK2LZy3ZsPn2K+hIhFf1zOTBJc4G8g/eABKcyS4XM/P6Orz5sA0Xw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-6NmNnnU5lO3qcUXr3LO/2RTxGXd/kRxrCxXd1v9Mf7rV7lE7AxrHeUnDkEnP5fm9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Additional CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000; /* Cambiar el color del texto a negro */
+            font-family: 'Mulish', sans-serif;
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        #encabezado {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 40px 0;
+            position: relative;
+            width: 100%;
+            margin: 0;
+        }
+
+        .contenido {
+            flex: 1;
+            padding: 0 40px;
+        }
+
+        .imagen {
+            flex: 1;
+            text-align: right;
+        }
+
+        .imagen img {
+            width: auto;
+            height: 520px;
+            border-radius: 20px;
+            margin-right: 50px;
+        }
+
+        .boton-descubre {
+            margin-top: 20px;
+        }
+
+        .btn-descubre {
+            background-color: #F49292;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 25px;
+        }
+
+        .btn-descubre:hover {
+            background-color: #F47C7C;
+        }
+
+        #encabezado h2 {
+            font-size: 60px;
+            color: #000000;
+            padding: 5px 0;
+            margin-left: 40px;
+        }
+
+        #encabezado h4 {
+            text-align: justify; 
+            font-size: 20px;
+            color: #000000;
+            margin-left: 45px;
+            font-weight: normal;
+        }
+
+        #encabezado a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            margin-left: 40px;
+            border: none;
+        }
+
+        #encabezado p {
+            font-size: 15px;
+            color: #000000;
+            padding: 40px 0;
+            margin-left: 30px;
+        }
+
+        #encabezado .opciones {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label.checkbox-label {
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+        }
+
+        label.checkbox-label::before {
+            content: " ";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid #888;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        input[type="checkbox"]:checked + label.checkbox-label::before {
+            background-color: rgb(102, 150, 102);
+        }
+
+        .services-content{
+            font-size: 30px; /* Reducir el tamaño de la fuente */
+        }
+
+        .services-content h1{
+        margin-left: 150px;
+        }
+
+        .services-button {
+            margin: 100px;
+            margin-left: 120px;
+        }
+
+        .services-button button {
+            height: 90px;
+            width: 390px;
+            background-color: #F17268;
+            border-radius: 5px 5px 5px 25px;
+            cursor: pointer;
+            color: #000;
+            font-size: 40px;
+            font-weight: 700;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .services-button button a span {
+            color: #000;
+        }
+
+        .services-button button:hover {
+            background-color: #ec4a3e;
+            color: #fff;
+        }
+
+        .services-button button:hover a span {
+            color: #fff;
+        }
+
+        .main-services-content h2 {
+            width: 476px;
+            color: #58A371;
+            margin-top: 0;
+        }
+
+        .main-services-content img {
+            width: 650px;
+            height: auto;
+            object-fit: cover;
+            padding: 100px;
+        }
+
+        .content_left{
+            font-size: 18px; 
+        }
+
+        .content_left p{
+            width: 476px;
+            font-size: 18px; 
+            text-align: justify;
+            color: #000000; 
+        }
+
+        .content_right{
+            font-size: 18px; 
+        }
+
+        .content_right p{
+            width: 476px;
+            font-size: 18px; 
+            text-align: justify;
+            color: #000000; 
+        }
+
+        .service_camara{
+            display: flex;
+            align-items: center; /* Alinea verticalmente los elementos */
+            justify-content: space-around;
+        }
+
+        .service_riego {
+            display: flex;
+            align-items: center; /* Alinea verticalmente los elementos */
+            justify-content: space-around;
+            background-color: #D9D9D9;
+        }
+
+        .service_alimentacion{
+            display: flex;
+            align-items: center; /* Alinea verticalmente los elementos */
+            justify-content: space-around;
+        }
+
+        .service_monitoreo {
+            display: flex;
+            align-items: center; /* Alinea verticalmente los elementos */
+            justify-content: space-around;
+            background-color: #D9D9D9;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #ffffff; padding: 10px; font-family: 'Quicksand', sans-serif">
+        <a href="index.html">
+            <img src="images/SmartFarmLogo.jpeg" height="100" style="margin-left: 20px;">
+        </a>
+        <nav>
+            <div class="menu-bar">
+                <a href="Nosotros.html" class="menu-item">Nosotros</a>
+                <a href="#servicios" class="menu-item">Servicios</a>
+                <a href="contactanos.html" class="menu-item">Contáctanos</a>
+                <a href="Blog.html" class="menu-item">Blog</a>
+                <a href="Registro.html" class="menu-item2">Crear Cuenta</a>
+                <a href="InicioSesion.html" class="menu-item3">Ingresar</a>
+            </div>
+        </nav>
+    </header>    
+    <main>
+        <div id="servicios">
+            <div class="main-services-content">
+                <div class="service_camara">
+                    <div class="content_left">
+                        <h2>Cámaras de Vigilancia</h2>
+                        <p>Asegura tu inversión con cámaras de vigilancia de alta tecnología. Monitorea tu propiedad las 24 horas del día para proteger tus instalaciones y cultivos. Nuestras cámaras ofrecen una resolución de alta definición, visión nocturna y detección de movimiento, permitiéndote estar al tanto de cualquier actividad sospechosa. Además, puedes acceder a las grabaciones y transmisiones en vivo desde cualquier dispositivo conectado a internet, brindándote tranquilidad y control total sobre la seguridad de tu granja.</p>
+                    </div>
+                    <img src="images/servicios/camara.jpeg" alt="Cámaras de Vigilancia">
+                </div>
+                <div class="service_riego">
+                    <img src="images/servicios/riego.jpeg" alt="Riego Automatizado">
+                    <div class="content_right">
+                        <h2>Riego Automatizado</h2>
+                        <p>Optimiza el uso del agua con nuestros sistemas de riego automatizado. Programa y ajusta el riego según las necesidades específicas de tus cultivos, garantizando que cada planta reciba la cantidad adecuada de agua en el momento preciso. Este sistema no solo ahorra agua, sino que también aumenta la eficiencia del riego, mejora la salud de las plantas y maximiza la producción. Con sensores de humedad del suelo y control remoto, puedes gestionar el riego de tu granja desde cualquier lugar, asegurando un crecimiento óptimo de tus cultivos.</p>
+                    </div>
+                </div>
+                <div class="service_alimentacion">
+                    <div class="content_left">
+                        <h2>Alimentación Automatizada</h2>
+                        <p>Optimiza la nutrición de tu ganado con nuestros avanzados sistemas de alimentación automatizada. Programa y ajusta la distribución de alimentos según las necesidades específicas de cada animal, asegurando que reciban la cantidad adecuada de nutrientes en el momento oportuno. Estos sistemas no solo mejoran la salud y el bienestar de tu ganado, sino que también aumentan la eficiencia en la gestión de los recursos alimenticios y reducen el desperdicio. Con monitoreo continuo y ajustes automáticos, puedes estar seguro de que tus animales están bien alimentados en todo momento.</p>
+                    </div>
+                    <img src="images/servicios/alimentacion.jpg" alt="Alimentación Automatizada">
+                </div>
+                <div class="service_monitoreo">
+                    <img src="images/servicios/monitoreo.jpeg" alt="Monitoreo Remoto">
+                    <div class="content_right">
+                        <h2>Monitoreo Remoto</h2>
+                        <p>Mantén el control total de tu granja desde cualquier lugar con nuestro sistema de monitoreo remoto en tiempo real. Con esta tecnología, puedes supervisar diversas variables de tu operación agrícola, como la humedad del suelo, la temperatura, la calidad del aire y el estado de tus cultivos, todo desde la comodidad de tu dispositivo móvil o computadora. Esto te permite tomar decisiones informadas rápidamente, mejorar la eficiencia operativa y responder a cualquier problema antes de que se convierta en una amenaza para tu producción.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer style="padding: 20px 0; text-align: left; font-family: 'Quicksand', sans-serif; background-color: #D5F1E5;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1;">
+                <img src="images/SmartFarmLogo.jpeg" height="150" style="margin-left: 50px;">
+            </div>
+            <div style="flex: 1; justify-content: space-between; align-items: flex-start;">
+                <a href="contactanos.html" style="display: block; margin-bottom: 10px;">Contáctanos</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">&#x2709; info@smartfarm.pe</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Empresas</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Inscripción</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Términos y condiciones</a>
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 10px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">LOCALES Y CONTACTO</p>
+                    <p>Av. San Luis 2645, San Borja</p>
+                    <p>941 145 243</p>
+                    <p>01 635 2774</p>
+                </div>
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 5px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">HORARIOS</p>
+                    <p style="font-weight: bold;">San Borja</p>
+                    <p>Atención: Lunes a Sábado - 8 a.m. - 10 p.m.</p>
+                    <p>Domingos - 8 a.m. - 8 p.m.</p>
+                    <p>1012457896</p>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px; text-align: center;">@2024 Smart Farm Systems | Todos los derechos reservados.</p>
+        <div style="text-align: left; margin-left: 50px; margin-top: -20px; display: flex; align-items: center;">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube silueta.png" height="40"></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

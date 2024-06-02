@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFarmSystems</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,700">
+    <link rel="stylesheet" href="css/misestilos.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-xxdFh0+za4tBK2LZy3ZsPn2K+hIhFf1zOTBJc4G8g/eABKcyS4XM/P6Orz5sA0Xw" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-6NmNnnU5lO3qcUXr3LO/2RTxGXd/kRxrCxXd1v9Mf7rV7lE7AxrHeUnDkEnP5fm9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Mulish', sans-serif;
+        }
+
+
+        header {
+            background-color: #000;
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        ul {
+        list-style: none; /* Elimina las viñetas de la lista */
+        }
+
+        li {
+        margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+        display: none; /* Oculta el checkbox nativo */
+        }
+
+        label.checkbox-label {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        }
+
+        label.checkbox-label::before {
+            content: " "; /* Espacio en blanco para el pseudo-elemento */
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 255, 255); /* Color del cuadro cuando no está marcado */
+            border: 1px solid #888;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+
+        input[type="checkbox"]:checked + label.checkbox-label::before {
+            background-color: green; /* Cambia el color del cuadro cuando se marca */
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #ffffff; padding: 10px; font-family: 'Quicksand', sans-serif">
+        <a href="index.html">
+            <img src="images/SmartFarmLogo.jpeg" height="100" style="margin-left: 20px;">
+        </a>
+        <nav>
+            <div class="menu-bar">
+                <a href="Inicio.html" class="menu-item">Inicio</a>
+                <a href="Tienda.html" class="menu-item">Tienda</a>
+                <a href="Monitoreo.html" class="menu-item">Monitoreo</a>
+                <a href="Soporte.html" class="menu-item">Soporte</a>
+                <a href="MiCuenta.html" class="menu-item">Mi Cuenta</a>
+            </div>
+        </nav>
+    </header>  
+    <main>
+        <div id= "encabezado">
+            <div class = "contenido">
+                <h2>Bienvenido</h2>
+                <h3>José y Chewbacca!</h3>
+            </div>
+        </div>
+        <div id="contenedor">
+            <div id="recuadro1">
+                <div>
+                    <h1 style="padding: 10px 0;">Monitoreo</h1>
+                    <img src="images/camaramodelo.png" height="200" style="margin-left: 10px; margin-right: 30px; margin-bottom: 10px;">
+                    <img src="images/camaramodelo.png" height="200" style="margin-right: 30px; margin-bottom: 10px;">
+                    <div style="text-align: center;">
+                        <a href="#" class="btn-Vermás" style="padding: 7px 20px; display: inline-block;">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div id= "recuadro2">
+                <div>
+                    <h1 style="padding: 10px 0;">Estadística de alimentación de animales</h1>
+                    <img src="images/estadísticaanimales1.png" height="130">
+                    <img src="images/tablaanimales1.png" height="130" style="margin-top: 15px;">
+                </div>
+            </div>
+        </div>
+        <div id="contenedor2">
+            <div id="recuadro3">
+                <div>
+                    <h1 style="padding: 15px 0;">Tu carrito</h1>
+                    <div style="display: flex;">
+                        <img src="images/camaravigilancia.jpg" height="80" style="margin-right: 20px; text-align: left; margin-left: 30px;">
+                        <div style="display: flex; flex-direction: column;">
+                            <h2 style="margin: 0;">Cámara de videovigilancia</h2>
+                            <p style="margin-top: 10px; text-align: left;">S/.20.00</p> <!-- Cambiado de p1 a p para corrección semántica -->
+                        </div>
+                    </div>
+                    <div style="display: flex; margin-top: 20px; margin-bottom: 20px;" >
+                        <img src="images/sensor de luz.jpg" height="80" style="margin-right: 20px; text-align: left; margin-left: 30px;">
+                        <div style="display: flex; flex-direction: column;">
+                            <h2 style="margin: 0;">Sensor de luz</h2>
+                            <p style="margin-top: 10px; text-align: left;">S/.20.00</p> <!-- Cambiado de p1 a p para corrección semántica -->
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#" class="btn-Vermás" style="padding: 7px 20px; display: inline-block;">Pagar ahora</a>
+                </div>
+            </div>
+            <div id="recuadro4">
+                <div>
+                    <h1 style="padding: 15px 0;">Soporte</h1>
+                    <img src="images/programador.png" height="50" alt="Imagen circular" class="circular-image">
+                    <h2>Jóse Huertas</h2>
+                    <p1>29 años | Surquillo, Perú</p1>
+                </div>
+                <div style="text-align: center; margin-top: 10px;">
+                    <a href="#" class="btn-Vermás" style="padding: 7px 20px; display: inline-block;">Contactar</a>
+                </div>
+            </div>
+            <div id="recuadro5">
+                <div>
+                    <h1 style="padding: 15px 0;">Estadísticas de riego</h1>
+                    <img src="images/estadísticariego.png" height="115">
+                    <img src="images/tablariego.png" height="100" style="margin-top:20px;">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="padding: 20px 0; text-align: left; font-family: 'Quicksand', sans-serif; background-color: #D5F1E5;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <!-- Columna 1: Logo -->
+            <div style="flex: 1;">
+                <img src="images/SmartFarmLogo.jpeg" height="150" style="margin-left: 50px;">
+            </div>
+            <!-- Columna 2: Botones -->
+            <div style="flex: 1; justify-content: space-between; align-items: flex-start;">
+                <a href="#" style="display: block; margin-bottom: 10px;">Contáctanos</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">&#x2709; info@smartfarm.pe</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Empresas</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Inscripción</a>
+                <a href="#" style="display: block; margin-bottom: 10px;">Términos y condiciones</a>
+            </div>
+            <!-- Columna 3: Información de locales y horarios -->
+            <div style="flex: 1">
+                <div style="margin-bottom: 10px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">LOCALES Y CONTACTO</p>
+                    <p>Av. San Luis 2645, San Borja</p>
+                    <p>941 145 243</p>
+                    <p>01 635 2774</p>
+                </div>
+            </div>
+            <!-- Columna 4: Información de horarios -->
+            <div style="flex: 1">
+                <div style="margin-bottom: 5px;">
+                    <p style="font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 10px;">HORARIOS</p>
+                    <p style="font-weight: bold;">San Borja</p>
+                    <p>Atención: Lunes a Sábado - 8 a.m. - 10 p.m.</p>
+                    <p>Domingos - 8 a.m. - 8 p.m.</p>
+                    <p>1012457896</p>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px; text-align: center;">@2024 Smart Farm Systems | Todos los derechos reservados.</p>
+        <div style="text-align: left; margin-left: 50px; margin-top: -20px; display: flex; align-items: center;">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram silueta.png" height="35" style="margin-right: 20px;"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube silueta.png" height="40"></a>
+        </div>
+    
+    </footer>
+</body>
+
+</html>
