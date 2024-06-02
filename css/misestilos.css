@@ -398,9 +398,6 @@ footer a {
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-
-
 
 
 /*monitoreo*/
@@ -548,7 +545,6 @@ body {
 
   /*Inicio*/
   #recuadro1 h1 {
-=======
 #encabezado {
     text-align: left;
     padding: 10px 0;
@@ -613,7 +609,6 @@ body {
 }
 
 #recuadro1 h1 {
->>>>>>> f2cf1af6825c17f79b3fc975e4804386fe59b4c8
     color: #61aa7b;
     font-size: 23px;
     text-align: left;
@@ -741,7 +736,6 @@ body {
     font-size: 23px;
     text-align: center ;
     font-weight: bold;
-<<<<<<< HEAD
 }
 
 /*Mi cuenta*/
@@ -815,6 +809,4 @@ body {
     margin-bottom: 10px;
 }
 
-=======
 }
->>>>>>> f2cf1af6825c17f79b3fc975e4804386fe59b4c8
